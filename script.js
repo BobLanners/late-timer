@@ -1,6 +1,7 @@
 // -------------------------
 // Generate the sharing link
 // -------------------------
+
 if (typeof document !== "undefined") {
   const generateBtn = document.getElementById("generateBtn");
   if (generateBtn) {
@@ -38,6 +39,7 @@ if (typeof document !== "undefined") {
 // -------------------------
 // Timer page logic
 // -------------------------
+let currentGifTier = null;
 function startTimerPage() {
   const params = new URLSearchParams(window.location.search);
 
@@ -86,17 +88,26 @@ function startTimerPage() {
     // ---- GIF LOGIC HERE ----
     const minutesLate = Math.floor(totalSeconds / 60);
 
-    let gifSrc = "";
+    // Determine GIF tier
+    let newTier;
     if (minutesLate < 10) {
-      gifSrc = "assets/gifs/Waiting.gif";
+      newTier = 1;
     } else if (minutesLate < 20) {
-      gifSrc = "assets/gifs/Waiting_2.gif";
+      newTier = 2;
     } else {
-      gifSrc = "assets/gifs/Waiting_3.gif";
+      newTier = 3;
     }
 
-    const gifEl = document.getElementById("dynamicGif");
-    gifEl.src = gifSrc;
+    // Only change GIF when tier changes
+    if (newTier !== currentGifTier) {
+      currentGifTier = newTier;
+
+      const gifEl = document.getElementById("dynamicGif");
+
+      if (newTier === 1) gifEl.src = "assets/gifs/Waiting.gif";
+      if (newTier === 2) gifEl.src = "assets/gifs/Waiting_2.gif";
+      if (newTier === 3) gifEl.src = "assets/gifs/Waiting_3.gif";
+    }
 }
 
   updateTimer();
