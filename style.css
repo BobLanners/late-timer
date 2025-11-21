@@ -5,7 +5,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background: #fafafa;
+  background: #000000;
 }
 
 .timer-box {
@@ -17,7 +17,7 @@ body {
 /* Center GIF container */
 .gif-container {
   margin: 20px auto;
-  text-align: left;
+  text-align: center;
 }
 
 /* Size the GIF — adjust as you like */
