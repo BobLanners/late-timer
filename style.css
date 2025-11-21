@@ -1,11 +1,38 @@
 /* Makes everything centered and clean */
 body {
   font-family: Arial, sans-serif;
+  font-size: 48px;
+  color: #ff0000;
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background: #ffffff;
+  background: #000000;
+}
+@font-face {
+  font-family: 'GhostFlamesFONTDemo';
+  src: url(assets/fonts/GhostFlamesFONTDemo.otf) format('opentype');
+}
+
+h1{
+  font-family: 'GhostFlamesFONTDemo', sans-serif;
+}
+.fire-text {
+  font-family: 'GhostFlamesFONTDemo', sans-serif;
+  color: #ff6600;
+  text-shadow: 
+    0 0 10px #ff3300,
+    0 0 20px #ff3300,
+    0 0 30px #ff0000;
+  animation: fire 1.5s infinite ease-in-out;
+}
+
+@keyframes fire {
+  0%   { transform: translateY(0px) skewX(0deg); }
+  25%  { transform: translateY(-2px) skewX(2deg); }
+  50%  { transform: translateY(0px) skewX(-2deg); }
+  75%  { transform: translateY(1px) skewX(1deg); }
+  100% { transform: translateY(0px) skewX(0deg); }
 }
 
 .timer-box {
@@ -23,7 +50,6 @@ body {
 /* Size the GIF — adjust as you like */
 .center-gif {
   max-width: 400px;
-  margin-left: -100px;
 }
 
 /* Custom message under the GIF */
