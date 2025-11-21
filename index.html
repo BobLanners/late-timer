@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Late Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Create a “You’re Late” Timer</h1>
+
+  <div class="card">
+    <label>Name of the person:</label>
+    <input id="nameInput" type="text" placeholder="Alex">
+
+    <label>Meet-up time:</label>
+    <input id="timeInput" type="datetime-local">
+
+    <label>Custom message:</label>
+    <input id="msgInput" type="text" placeholder="Why are you always like this?">
+
+    <button id="generateBtn">Generate Link</button>
+
+    <label>Share this link:</label>
+    <input id="resultLink" type="text" readonly>
+    <button id="copyBtn">Copy</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
