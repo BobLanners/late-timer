@@ -22,10 +22,8 @@ body {
 
 /* Size the GIF — adjust as you like */
 .center-gif {
-  width: 100%;
   max-width: 400px;
-  border-radius: 8px;
-  
+  margin-left: -100px;
 }
 
 /* Custom message under the GIF */
