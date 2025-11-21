@@ -6,15 +6,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <h1 id="title">You're Late!</h1>
-  <p id="message"></p>
+
+  <!-- TIMER -->
   <div class="timer-box">
     <span id="timerText">Loading…</span>
   </div>
 
+  <!-- GIF CENTERPIECE -->
+  <div class="gif-container">
+    <img src="assets/late.gif" alt="Drama GIF" class="center-gif">
+  </div>
+
+  <!-- CUSTOM MESSAGE -->
+  <p id="message" class="custom-message"></p>
+
   <script src="script.js"></script>
   <script>
-    // start timer automatically on load
     startTimerPage();
   </script>
 </body>
